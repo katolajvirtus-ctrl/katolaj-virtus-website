@@ -1,196 +1,333 @@
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-white text-gray-900">
+  const services = [
+    {
+      title: "Environmental Intelligence",
+      items: [
+        "Environmental Monitoring",
+        "Decision Support Systems",
+        "Environmental Analytics",
+        "Landscape Intelligence",
+      ],
+    },
+    {
+      title: "Forestry & Natural Resources",
+      items: [
+        "Forest Inventory",
+        "Forest Management Planning",
+        "Biodiversity Surveys",
+        "Tree Planting & Restoration",
+      ],
+    },
+    {
+      title: "GIS & Remote Sensing",
+      items: [
+        "Satellite Image Analysis",
+        "Drone Mapping",
+        "Spatial Analysis",
+        "Geospatial Databases",
+      ],
+    },
+    {
+      title: "Restoration Science",
+      items: [
+        "Ecosystem Restoration",
+        "Landscape Recovery",
+        "Restoration Monitoring",
+        "Adaptive Management",
+      ],
+    },
+    {
+      title: "Biomass & Bioenergy",
+      items: [
+        "Biochar Systems",
+        "Biomass Resource Assessment",
+        "Sawmill Waste Utilization",
+        "Renewable Energy Solutions",
+      ],
+    },
+    {
+      title: "Carbon & Climate Solutions",
+      items: [
+        "Carbon Accounting",
+        "Carbon Assessment",
+        "MRV Systems",
+        "ESG Reporting",
+      ],
+    },
+  ];
 
-      {/* Hero Section */}
-      <section className="bg-green-900 text-white py-20 px-6 text-center">
-        <h1 className="text-5xl font-bold mb-4">
+  const initiatives = [
+    {
+      name: "KEIN",
+      description: "Katolaj Environmental Intelligence Network",
+    },
+    {
+      name: "KFIO",
+      description: "Katolaj Forest Intelligence Observatory",
+    },
+    {
+      name: "KARS",
+      description: "Katolaj Adaptive Restoration Solutions",
+    },
+    {
+      name: "CRS",
+      description: "Centre for Restoration Studies",
+    },
+  ];
+
+  return (
+    <main style={{ fontFamily: "Arial, sans-serif", color: "#0f172a" }}>
+      {/* HERO */}
+      <section
+        style={{
+          background: "#14532d",
+          color: "white",
+          textAlign: "center",
+          padding: "100px 20px",
+        }}
+      >
+        <h1 style={{ fontSize: "3.5rem", marginBottom: "10px" }}>
           KATOLAJ VIRTUS LTD
         </h1>
 
-        <p className="text-2xl mb-4">
+        <p style={{ fontSize: "1.4rem", marginBottom: "20px" }}>
           Dare to Dream
         </p>
 
-        <p className="max-w-4xl mx-auto text-lg">
+        <p style={{ maxWidth: "900px", margin: "0 auto", lineHeight: "1.8" }}>
+          Environmental Intelligence • Forestry • GIS & Remote Sensing •
+          Biomass & Bioenergy • Carbon Solutions
+        </p>
+
+        <h2 style={{ marginTop: "25px" }}>
           Innovating Sustainability for a Better Future
+        </h2>
+      </section>
+
+      {/* ABOUT */}
+      <section style={{ padding: "80px 10%" }}>
+        <h2>About Us</h2>
+
+        <p style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
+          KATOLAJ Virtus Ltd is a multidisciplinary environmental intelligence
+          and sustainability company providing innovative solutions in forestry,
+          environmental monitoring, GIS and remote sensing, restoration
+          science, biomass energy, carbon accounting, biodiversity
+          conservation, climate resilience, research and capacity development.
+        </p>
+
+        <p style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
+          We transform environmental data into actionable intelligence for
+          sustainable development, restoration planning, carbon management and
+          ecosystem resilience across Africa and beyond.
         </p>
       </section>
 
-      {/* About */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">
-          About Us
-        </h2>
+      {/* VISION */}
+      <section
+        style={{
+          background: "#f3f4f6",
+          padding: "60px 10%",
+        }}
+      >
+        <h2>Our Vision</h2>
 
-        <p className="text-lg leading-8">
-          KATOLAJ Virtus Ltd is a multidisciplinary environmental
-          intelligence and sustainability company providing innovative
-          solutions in forestry, GIS, remote sensing, restoration science,
-          biodiversity conservation, climate resilience, research,
-          environmental monitoring and capacity development.
+        <p style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
+          To become a leading African environmental intelligence and
+          sustainability company delivering innovative solutions for resilient
+          ecosystems, climate action and sustainable development.
         </p>
       </section>
 
-      {/* Vision */}
-      <section className="bg-gray-100 py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">
-            Our Vision
-          </h2>
+      {/* SERVICES */}
+      <section style={{ padding: "80px 10%" }}>
+        <h2 style={{ marginBottom: "30px" }}>Our Services</h2>
 
-          <p className="text-lg">
-            To become a leading African environmental intelligence and
-            sustainability company delivering innovative solutions for
-            resilient ecosystems and sustainable development.
-          </p>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+            gap: "20px",
+          }}
+        >
+          {services.map((service) => (
+            <div
+              key={service.title}
+              style={{
+                border: "1px solid #ddd",
+                borderRadius: "12px",
+                padding: "20px",
+                boxShadow: "0 2px 10px rgba(0,0,0,0.08)",
+              }}
+            >
+              <h3>{service.title}</h3>
+
+              <ul>
+                {service.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10">
-          Our Services
-        </h2>
+      {/* CIRCULAR ECONOMY */}
+      <section
+        style={{
+          background: "#ecfdf5",
+          padding: "80px 10%",
+        }}
+      >
+        <h2>Circular Economy & Waste-to-Wealth</h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <p style={{ lineHeight: "1.8", fontSize: "1.1rem" }}>
+          Turning waste streams into valuable resources through innovative
+          biomass utilization, circular economy models, biochar technologies
+          and sustainable energy systems.
+        </p>
 
-          <div className="p-6 shadow rounded-lg">
-            <h3 className="font-bold text-xl mb-3">
-              Forestry & Natural Resources
-            </h3>
-            <p>
-              Forest inventory, biodiversity surveys,
-              restoration planning and ecosystem management.
-            </p>
-          </div>
-
-          <div className="p-6 shadow rounded-lg">
-            <h3 className="font-bold text-xl mb-3">
-              GIS & Remote Sensing
-            </h3>
-            <p>
-              Mapping, drone applications,
-              satellite analysis and environmental monitoring.
-            </p>
-          </div>
-
-          <div className="p-6 shadow rounded-lg">
-            <h3 className="font-bold text-xl mb-3">
-              Climate & Sustainability
-            </h3>
-            <p>
-              Carbon assessment, ESG support,
-              restoration monitoring and climate resilience.
-            </p>
-          </div>
-
-        </div>
+        <ul style={{ lineHeight: "2" }}>
+          <li>Waste-to-Wealth Solutions</li>
+          <li>Circular Bioeconomy</li>
+          <li>Biochar Production Systems</li>
+          <li>Biomass Briquettes</li>
+          <li>Resource Recovery Technologies</li>
+        </ul>
       </section>
 
-      {/* Flagship Initiatives */}
-      <section className="bg-green-50 py-16 px-6">
-        <div className="max-w-6xl mx-auto">
+      {/* CARBON */}
+      <section style={{ padding: "80px 10%" }}>
+        <h2>Carbon & Climate Services</h2>
 
-          <h2 className="text-3xl font-bold mb-10">
-            Flagship Initiatives
-          </h2>
-
-          <div className="space-y-8">
-
-            <div>
-              <h3 className="text-2xl font-bold">
-                KEIN
-              </h3>
-              <p>
-                Katolaj Environmental Intelligence Network
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold">
-                KFIO
-              </h3>
-              <p>
-                Katolaj Forest Intelligence Observatory
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold">
-                KARS
-              </h3>
-              <p>
-                Katolaj Adaptive Restoration Solutions
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold">
-                CRS
-              </h3>
-              <p>
-                Centre for Restoration Studies
-              </p>
-            </div>
-
-          </div>
-        </div>
+        <ul style={{ lineHeight: "2" }}>
+          <li>Carbon Accounting</li>
+          <li>Forest Carbon Assessment</li>
+          <li>Carbon Project Development</li>
+          <li>Carbon Credit Readiness</li>
+          <li>MRV Systems</li>
+          <li>ESG & Sustainability Reporting</li>
+        </ul>
       </section>
 
-      {/* TV & Media */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">
-          TV & Media Division
-        </h2>
+      {/* INITIATIVES */}
+      <section
+        style={{
+          background: "#f0fdf4",
+          padding: "80px 10%",
+        }}
+      >
+        <h2>Flagship Initiatives</h2>
 
-        <p className="text-lg">
-          Producing environmental documentaries,
-          educational video series, YouTube content,
-          social media campaigns and public awareness programmes.
+        {initiatives.map((initiative) => (
+          <div key={initiative.name} style={{ marginBottom: "30px" }}>
+            <h3>{initiative.name}</h3>
+            <p>{initiative.description}</p>
+          </div>
+        ))}
+      </section>
+
+      {/* TV & MEDIA */}
+      <section style={{ padding: "80px 10%" }}>
+        <h2>TV & Media Division</h2>
+
+        <p style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
+          Producing environmental documentaries, educational television series,
+          YouTube content, social media campaigns and public awareness
+          programmes that promote sustainability and environmental stewardship.
+        </p>
+
+        <ul style={{ lineHeight: "2" }}>
+          <li>Environmental TV Series</li>
+          <li>YouTube Educational Content</li>
+          <li>Documentary Production</li>
+          <li>Environmental Awareness Campaigns</li>
+          <li>Educational Media Programmes</li>
+        </ul>
+
+        <h3 style={{ color: "#14532d" }}>
+          Coming Soon on YouTube and Facebook
+        </h3>
+      </section>
+
+      {/* FOUNDER */}
+      <section
+        style={{
+          background: "#f3f4f6",
+          padding: "80px 10%",
+        }}
+      >
+        <h2>Founder</h2>
+
+        <h3>Dr. Francis A. Faruwa</h3>
+
+        <p style={{ lineHeight: "1.8" }}>
+          Forestry and Environmental Management Professional with expertise in
+          Biomass Energy, Carbon Accounting, GIS & Remote Sensing, Restoration
+          Science, Environmental Intelligence, Biodiversity Conservation and
+          Climate Resilience.
         </p>
       </section>
 
-      {/* Founder */}
-      <section className="bg-gray-100 py-16 px-6">
-        <div className="max-w-6xl mx-auto">
+      {/* PARTNERSHIPS */}
+      <section style={{ padding: "80px 10%" }}>
+        <h2>Partnerships</h2>
 
-          <h2 className="text-3xl font-bold mb-6">
-            Founder
-          </h2>
+        <p>We collaborate with:</p>
 
-          <h3 className="text-2xl font-semibold">
-            Dr. Francis A. Faruwa
-          </h3>
-
-          <p className="mt-4">
-            Forestry and environmental management professional
-            with expertise in GIS, remote sensing,
-            biomass energy, biodiversity conservation,
-            restoration science and climate resilience.
-          </p>
-
-        </div>
+        <ul style={{ lineHeight: "2" }}>
+          <li>Government Agencies</li>
+          <li>Universities</li>
+          <li>Research Institutions</li>
+          <li>NGOs</li>
+          <li>Development Organisations</li>
+          <li>Carbon Project Developers</li>
+          <li>Private Sector Partners</li>
+        </ul>
       </section>
 
-      {/* Contact */}
-      <section className="bg-green-900 text-white py-16 px-6 text-center">
-
-        <h2 className="text-3xl font-bold mb-6">
-          Contact Us
-        </h2>
+      {/* CONTACT */}
+      <section
+        style={{
+          background: "#14532d",
+          color: "white",
+          textAlign: "center",
+          padding: "80px 20px",
+        }}
+      >
+        <h2>Contact Us</h2>
 
         <p>Email: katolajvirtus@gmail.com</p>
 
         <p>Phone: +2347019817838</p>
 
         <p>
-          No 3 Okeola Kemta, Abeokuta,
+          No 3 Okeola Kemta,
+          <br />
+          Abeokuta,
+          <br />
           Ogun State, Nigeria
         </p>
-
       </section>
 
+      {/* FOOTER */}
+      <footer
+        style={{
+          background: "#052e16",
+          color: "white",
+          textAlign: "center",
+          padding: "30px",
+        }}
+      >
+        <h3>KATOLAJ VIRTUS LTD</h3>
+
+        <p>
+          Environmental Intelligence | Forestry | GIS & Remote Sensing |
+          Biomass & Bioenergy | Carbon Solutions
+        </p>
+
+        <p>Dare to Dream. Innovating Sustainability for a Better Future.</p>
+      </footer>
     </main>
   );
 }
